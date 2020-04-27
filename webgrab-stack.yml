@@ -1,0 +1,13 @@
+version: "3"
+services:
+  webgrabplus:
+    image: linuxserver/webgrabplus
+    container_name: webgrabplus
+    environment:
+      - PUID=1000
+      - PGID=1000
+        - TZ=NewZealand/Auckland
+    volumes:
+      - path to /mnt/docker/webgrabplus/config:/config
+      - path to /mnt/docker/webgrabplus/data:/data
+    restart: unless-stopped
